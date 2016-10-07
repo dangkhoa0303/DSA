@@ -1,0 +1,128 @@
+<?php 
+
+if (isset($_POST['submit'])) {
+    $quote = $_POST['quote'];
+    $source = $_POST['source'];
+    $dobdod = $_POST['dob-dod'];
+    $wplink = $_POST['wplink'];
+    $wpimage = $_POST['wpimage'];
+    $category = $_POST['category'];        
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    label {
+        display:inline;
+        font-weight: bold;
+        letter-spacing:1px;
+    }
+
+    h3 {
+        color:red;
+        font-style:italic;
+    }
+
+    .inputSection {
+        display:inline;
+    }
+    
+    input {
+        display:block;
+        width: 439px;
+        height: 20px;
+        margin-left:100px;
+        background:#efefef;
+        border:1px solid;
+        padding:10px;
+        margin-top:-16px;
+        font-size:0.9em;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    input:focus {
+        border:1px solid #97d6eb;
+    }
+
+    #quotearea {
+        height: 100px;
+    }
+
+    select {
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        padding:5px;
+        margin-left:25px;
+    }
+
+    #submit {
+        width:127px;
+        height:38px;
+        border:none;
+        margin-top:20px;
+        cursor:pointer;
+    }
+
+    #submit:hover {
+        opacity:.9;
+    }
+    
+</style>
+</head>
+<body>
+
+   <form action="quote_input.html" method="post">
+       <h3>Enter your quote</h3> 
+    <br>
+
+    <div class="inputSection">
+        <label>Quote</label>
+        <input id="quotearea" name="quote" type="text" placeholder="Enter the quote here" required/>
+    </div>
+    <br>
+
+    <div class="inputSection">
+        <label>Source</label>
+        <input type="text" name="source" placeholder="Enter the author or source name here" required/>
+    </div>
+    <br>
+
+    <div class="inputSection">
+        <label>Dob-Dod</label>
+        <input type="text" name="dob-dod" placeholder="Enter the dob-dod here" required/>
+    </div>
+    <br>
+
+    <div class="inputSection">
+        <label>WP link</label>
+        <input type="text" name="wplink" placeholder="Enter the link to the source's Wikipedia here" required/>
+    </div>
+    <br>
+
+    <div class="inputSection">
+        <label>WP image</label>
+        <input type="text" name="wpimage" placeholder="Enter the link to the source's image on Wikipedia here" required/>
+    </div>
+    <br>
+
+    <div class="inputSection">
+        <label>Category</label>
+        <select name="quoteType">
+        <option>Romantic</option>
+    </select> 
+    </div>
+
+    <br>
+    
+    <input id="submit" name="submit" type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
